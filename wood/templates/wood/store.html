@@ -1,0 +1,25 @@
+﻿{% extends 'wood/base.html' %}
+
+{% block title %}Store{% endblock %}
+
+{% block content %}
+<div class="col-md-2 store_category">
+	<ul class="nav nav-list">
+		<li class="nav-header">Категории</li>
+		<a href='#'><li>Из дерева</li></a>
+		<a href='#'><li>Из металла</li></a>
+		<a href='#'><li>Из глины</li></a>
+	</ul>
+</div>
+
+<div class='col-md-8'>
+	<!--<h3 class='text-center'>chosen_category</h3>-->
+	{% for product in products %}
+	<div class="well store_page_items">
+		<img src="{{ product.image.url }}" alt='{{ product.name }}' class="store_images img-rounded"/>
+		<p class="store_page_items_name">{{ product }}</p>
+		<p>{{ product.price }} &#8372</p>
+	</div>
+	{% endfor %}
+</div>
+{% endblock %}

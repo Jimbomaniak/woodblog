@@ -1,0 +1,45 @@
+{% load staticfiles %}<!--Олег, памятка подключил тут статические файлы css-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="{% static 'wood/js/jquery-1.12.3.min.js' %}"></script>
+    <script src="{% static 'wood/js/bootstrap.min.js' %}"></script><!-- подключен bootstrap-->
+
+    <title>{% block title %}{% endblock %}</title>
+    
+    <!-- Bootstrap core CSS -->
+    <link href="{% static 'wood/css/bootstrap.min.css' %}" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="{% static 'wood/css/style.css' %}" rel="stylesheet"><!--  указана папка c css-->
+</head>
+  <body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="{% url 'main' %}">Home</a></li>
+			<li><a href="{% url 'store' %}">Store</a></li>
+            <li><a href="{% url 'about' %}">About</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+    <div class="container main-content"><!--класс main-content это в css файле класс создан с отступом-->
+      {% block content %}
+      {% endblock%}
+      </div>
+    </div><!-- /.container -->
+    
+
+  </body>
+</html>
