@@ -5,14 +5,11 @@
 .blog-img {
     height: 160px;
     width: 160px;
-
 }
-
 .article-img {
     height: 400px;
     width: 400px;
 }
-
 .store_category {
     font-size: 16px;
     padding-top: 50px;
@@ -29,51 +26,15 @@
     height: 160px;
     width: 160px;
 }
-/* Свойства кнопки ЧИТАТЬ ДАЛЬШЕ */
-.button {
-  display: inline-block;
-  border-radius: 2px;
-  background-color: #F29583;
-  border: 2px;
-  color: black;
-  text-align: center;
-  font-size: 16px;
-  font-style: italic;
-  width: 200px;
-  transition: all 0.5s;
-  cursor: pointer;
-  margin: 5px;
-}
-
-.button span {
-  cursor: pointer;
-  display: inline-block;
-  position: relative;
-  transition: 0.5s;
-}
-
-.button span:after {
-  content: '»';
-  position: absolute;
-  opacity: 0;
-  top: 0;
-  right: -20px;
-  transition: 0.5s;
-}
-
-.button:hover span {
-  padding-right: 25px;
-}
-
-.button:hover span:after {
-  opacity: 1;
-  right: 0;
-}
-
 a {
     color: #3D32A6;
 }
-
 .blog_page_articles {
     display: inline-block;
+}
+.article_main {
+    position: absolute;
+    left: 87px;
+    width: 360px;
+    padding: 8px;;
 }

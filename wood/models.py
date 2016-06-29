@@ -30,12 +30,21 @@ class Product(models.Model):
 
 
 class Category(models.Model):
+    class Meta():
+        ordering = ('name',)
+        verbose_name = 'Category'
+        verbose_name_plural = 'Categories'
+
     name = models.CharField(max_length=100)
 
     def __str__(self):
         return self.name
 
-    class Meta:
-        ordering = ('name',)
-        verbose_name = 'Category'
-        verbose_name_plural = 'Categories'
+
+class Comments(models.Model):
+    class Meta():
+        verbose_name = 'Comment'
+        verbose_name_plural = 'Comments'
+
+    comments_text = models.TextField(verbose_name='Текст комментария')
+    comments_article = models.ForeignKey(Article)
