@@ -1,0 +1,100 @@
+*::-webkit-input-placeholder {
+	color: #666;
+	opacity: 1;
+}
+*:-moz-placeholder {
+	color: #666;
+	opacity: 1;
+}
+*::-moz-placeholder {
+	color: #666;
+	opacity: 1;
+}
+*:-ms-input-placeholder {
+	color: #666;
+	opacity: 1;
+}
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid {
+	
+}
+body input:required:valid,
+body textarea:required:valid {
+	
+}
+body {
+	font-family: "RobotoRegular", sans-serif;
+	font-size: 16px;
+}
+.header_topline {
+	background-color: #330066;
+	padding:10px 0;
+}
+.header_topline a, p {
+	color: #9966D7;
+}
+.top_links {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.soc_buttons {
+	float: right;
+    vertical-align: middle;
+}
+.soc_buttons > a {
+	font-size:26px;
+    margin-left:8px;
+}
+.logo {
+	display: block;
+	padding:15px 0;
+	color: #fff;
+	font-size:40px;
+	font-family: "BradobreiRegular";
+	text-align: center;
+}
+.top_header {
+	background-color: #9966CC;
+}
+.main_menu	{
+	background-color: #69278a;
+	color: #fff;
+	margin-bottom: 20px;
+}
+.main_menu a {
+	color: #fff;
+	padding:15px 10px;
+	display: block;
+	-webkit-transition: all .45s;
+	-moz-transition: all .45s ;
+	-ms-transition: all .45s ;
+	-o-transition: all .45s ;
+	transition: all .45s ;
+}
+.main_menu a:hover {
+	background-color: #99339B;
+}
+.main_menu ul {
+	margin: 0;
+	padding: 0;
+	list-style-type:none;
+	float: left;
+}
+.main_menu ul li {
+	display: inline-block;
+}
+.top_contacts {
+	background-color: #3b1050;
+	float: right;
+	font-size: 34px;
+	line-height: 53px;
+    padding: 0px 20px;
+}
+h1 {
+	color: #e7ceff;
+	text-align: center;
+	font-family: "BradobreiRegular";
+	font-size: 30px;
+}
