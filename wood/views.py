@@ -1,8 +1,7 @@
-from django.shortcuts import render, render_to_response, redirect, get_object_or_404
+from django.shortcuts import render, render_to_response, redirect
 from .models import Article, Product, Comments
 from .forms import CommentForm
 from django.core.context_processors import csrf
-
 
 
 def main(request):
@@ -30,11 +29,12 @@ def store(request):
 def about(request):
     return render(request, 'wood/about.html')
 
+
 def addcomment(request, article_id):
     if request.POST:
         form = CommentForm(request.POST)
         if form.is_valid():
             comment = form.save(commit=False)
-            comment.comments_article =Article.objects.get(id=article_id)
+            comment.comments_article = Article.objects.get(id=article_id)
             form.save()
     return redirect('/articles/get/%s' % article_id)

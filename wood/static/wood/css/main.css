@@ -98,3 +98,25 @@ h1 {
 	font-family: "BradobreiRegular";
 	font-size: 30px;
 }
+/*Store section*/
+.store{
+	margin-top: 20px;
+	text-align: center;
+}
+.store_category {
+    font-size: 16px;
+    padding-top: 50px;
+}
+.store_page_items {
+    max-width: 200px;
+    display: inline-block;
+}
+.store_page_items_name{
+    font-family: "Bitstream Vera Sans Mono", Monaco, "Courier New", Courier, monospace;
+    font-size: 18px;
+}
+.store_images{
+    height: 160px;
+    width: 160px;
+}
+/* ----------- */

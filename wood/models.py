@@ -30,7 +30,7 @@ class Product(models.Model):
 
 
 class Category(models.Model):
-    class Meta():
+    class Meta:
         ordering = ('name',)
         verbose_name = 'Category'
         verbose_name_plural = 'Categories'
@@ -42,7 +42,7 @@ class Category(models.Model):
 
 
 class Comments(models.Model):
-    class Meta():
+    class Meta:
         verbose_name = 'Comment'
         verbose_name_plural = 'Comments'
 
