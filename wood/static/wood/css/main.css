@@ -98,6 +98,36 @@ h1 {
 	font-family: "BradobreiRegular";
 	font-size: 30px;
 }
+.slider_container img {
+	max-width:100%;
+}
+.slider_container {
+	position: relative;
+}
+.next_button, .prev_button {
+	background-color: rgba(215, 169, 255, 0.5);
+	padding: 0 25px;
+	color: #330066;
+	font-size: 46px;
+	position: absolute;
+	z-index: 10;
+	cursor: pointer;
+	top: 40%;
+	border-radius: 10em;
+}
+.next_button {
+	right: 25px;
+}
+.prev_button {
+	left: 25px;
+}
+.blog_item img {
+	max-width:100%;
+}
+.blog_item h3 {
+	font-family:"RobotoRegular";
+	margin-bottom: 10px;
+}
 /*Store section*/
 .store{
 	margin-top: 20px;
