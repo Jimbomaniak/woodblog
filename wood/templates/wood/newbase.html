@@ -46,10 +46,10 @@
                     <a href="#" class="logo">Арт-Лавка</a>
                     <nav class="main_menu clearfix">
                         <ul>
-                            <li class="active"><a href="#">Главная</a></li>
-                            <li><a href="#">Блог</a></li>
-                            <li><a href="#">Товары</a></li>
-                            <li><a href="#">Контакты</a></li>
+                            <li class="active"><a href="{% url 'main' %}">Главная</a></li>
+                            <li><a href="{% url 'main' %}">Блог</a></li>
+                            <li><a href="{% url 'store' %}">Товары</a></li>
+                            <li><a href="{% url 'about' %}">Контакты</a></li>
                         </ul>
                         <div class="top_contacts"><i class="fa fa-mobile" aria-hidden="true"></i>0(66)-671-31-51</div>
                     </nav>
@@ -59,6 +59,10 @@
         </div>
 
      </header>
+    <section class="main-content">
+        {% block content %}
+        {% endblock %}
+    </section>
 	<!--[if lt IE 9]>
 	<script src={% static "wood/libs/html5shiv/es5-shim.min.js" %}></script>
 	<script src={% static "wood/libs/html5shiv/html5shiv.min.js" %}></script>
