@@ -2,33 +2,38 @@
 
 {% block content %}
 <div class="container">
-                <div class="col-md-8">
-                    <div class="content_text">
-                        <div class="blog_item">
-                            <div class="row">
-                                <div class="col-md-12">
-                            {% for article in articles %}
-                                    <h3><a href="{% url 'single_article' article.id %}">{{ article.title }}</a></h3>
-                                </div>
-                                <div class="col-md-4">
-                                    <img src="{{ article.image.url }}" alt="">
-                                </div>
-                                <div class="col-md-8">
-                                    <p>{{ article.short_text }}...
-                                        <button class="button">
-                                            <a href="{% url 'single_article' article.id %}"><span>Читать дальше</span></a>
-                                        </button>
-                                    </p>
-                                </div>
-                            {% endfor %}
+    <div class="col-md-8">
+        <div class="content_text">
+            <div class="blog_item">
+                <div class="row">
+                    <div class="col-md-14">
+                        {% for article in articles %}
+                            <h3><a href="{% url 'single_article' article.id %}">{{ article.title }}</a></h3>
                             </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <aside>
-
-                    </aside>
+                            <div class="col-md-4">
+                                <img src="{{ article.image.url }}" alt="">
+                            </div>
+                            <div class="col-md-8">
+                                <p>{{ article.short_text }}...
+                                    <button class="button">
+                                        <a href="{% url 'single_article' article.id %}">Читать дальше</a>
+                                    </button>
+                                </p>
+                            </div>
+                        {% endfor %}
                 </div>
             </div>
+        </div>
+            <div class="col-md-4">
+                <aside class="right_side">
+                    <ul>
+                        {% for article in articles %}
+                        <li><a href="{% url 'single_article' article.id %}">{{ article.title }}</a></li>
+                        {% endfor %}
+                    </ul>
+                </aside>
+            </div>
+    </div>
+</div>
+
 {% endblock %}

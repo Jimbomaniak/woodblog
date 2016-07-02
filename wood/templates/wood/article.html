@@ -1,24 +1,22 @@
 {% extends 'wood/newbase.html' %}
 
-{% block title %}
-{{ article.title }}
-{% endblock %}
-
 {% block content %}
-    <div class="col-md-8">
+    <div class="col-md-12">
         <div class="single_art">
             <div class="row">
                 <h2>{{ article.title }}</h2>
                 <img src="{{ article.image.url }}">
-                <p align="left">{{ article.text }}</p>
-                <p align="left">Коментарии:</p>
+                <p>{{ article.text }}</p>
+                <p>Коментарии:</p>
                     {% for comment in comments %}
-                        <p>{{ comment.comments_text }}</p>
+                        <div class="comments">
+                            <p>{{ comment.comments_text }}</p>
+                        </div>
                     {% endfor %}
                         <form action="/articles/addcomment/{{ article.id }}/" method="post">
-                        {% csrf_token %}
-                        {{ form }}
-                        <input type="submit" class="button" value="Добавить комментарий">
+                            {% csrf_token %}
+                            {{ form }}
+                            <input type="submit" class="btn-primary" value="Добавить комментарий">
                         </form>
             </div>
         </div>
