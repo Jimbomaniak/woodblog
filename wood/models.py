@@ -1,4 +1,5 @@
 from django.db import models
+from django.utils import timezone
 
 TEXT_LEN_MIN = 400
 
@@ -42,9 +43,13 @@ class Category(models.Model):
 
 
 class Comments(models.Model):
+    def __str__(self):
+        return self.comments_text[:30]
+
     class Meta:
         verbose_name = 'Comment'
         verbose_name_plural = 'Comments'
 
     comments_text = models.TextField(verbose_name='Текст комментария')
+    pub_date = models.DateTimeField(default=timezone.now)
     comments_article = models.ForeignKey(Article)

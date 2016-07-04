@@ -9,11 +9,10 @@
 <!--<![endif]-->
 <head>
 	<meta charset="utf-8" />
-	<title>Заголовок</title>
+	<title>{% block title %}{% endblock %}</title>
 	<meta name="description" content="" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<link rel="shortcut icon" href="favicon.png" />
 	<link rel="stylesheet" href={% static "wood/libs/bootstrap/bootstrap-grid-3.3.1.min.css" %}  />
 	<link rel="stylesheet" href={% static "wood/libs/font-awesome-4.2.0/css/font-awesome.min.css" %} />
 	<link rel="stylesheet" href={% static "wood/libs/fancybox/jquery.fancybox.css" %} />
@@ -46,7 +45,6 @@
                     <a href="#" class="logo">Арт-Лавка</a>
                     <nav class="main_menu clearfix">
                         <ul>
-                            <li class="active"><a href="{% url 'main' %}">Главная</a></li>
                             <li><a href="{% url 'main' %}">Блог</a></li>
                             <li><a href="{% url 'store' %}">Товары</a></li>
                             <li><a href="{% url 'about' %}">Контакты</a></li>
@@ -67,10 +65,9 @@
                 </div>
             </div>
         </div>
-     </header>
+    </header>
     <section class="main_content">
-        {% block content %}
-        {% endblock %}
+        {% block content %}{% endblock %}
     </section>
 	<!--[if lt IE 9]>
 	<script src={% static "wood/libs/html5shiv/es5-shim.min.js" %}></script>
