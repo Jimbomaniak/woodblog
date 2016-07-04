@@ -61,9 +61,15 @@ body {
 	float: right;
     vertical-align: middle;
 }
-.soc_buttons > a {
+.soc_buttons a {
 	font-size:26px;
     margin-left:8px;
+}
+.soc_buttons a:hover {
+    background-color: #9047b4;
+    border-radius: 13px;
+    transition: all 0.2s
+
 }
 .logo {
 	display: block;
@@ -80,11 +86,13 @@ body {
 	background-color: #69278a;
 	color: #fff;
 	margin-bottom: 20px;
+	border-radius: 5px;
 }
 .main_menu a {
 	color: #fff;
-	padding:15px 10px;
+	padding: 15px 10px;
 	display: block;
+	border-radius: 5px;
 	-webkit-transition: all .45s;
 	-moz-transition: all .45s ;
 	-o-transition: all .45s ;
@@ -92,6 +100,7 @@ body {
 }
 .main_menu a:hover {
 	background-color: #99339B;
+	border-radius: 5px;
 }
 .main_menu ul {
 	margin: 0;
@@ -108,6 +117,7 @@ body {
 	font-size: 34px;
 	line-height: 53px;
     padding: 0 20px;
+	border-radius: 5px;
 }
 h1 {
 	color: #e7ceff;
@@ -118,10 +128,12 @@ h1 {
 /*Каруселька*/
 .slider_container img {
 	max-width:100%;
-	size: 400px;
+	border-radius: 5px;
 }
 .slider_container {
 	position: relative;
+	margin-bottom: 24px;
+    margin-top: -10px;
 }
 .next_button, .prev_button {
 	background-color: rgba(215, 169, 255, 0.5);
@@ -143,6 +155,7 @@ h1 {
 /*------*/
 .blog_item img {
 	max-width:100%;
+	border-radius: 10px;
 }
 .blog_item h3 {
 	font-family:"RobotoRegular";

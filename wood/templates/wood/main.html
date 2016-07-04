@@ -27,6 +27,7 @@
             <div class="col-md-4">
                 <aside class="right_side">
                     <ul>
+                        <li>Список статей:</li>
                         {% for article in articles %}
                         <li><a href="{% url 'single_article' article.id %}">{{ article.title }}</a></li>
                         {% endfor %}
