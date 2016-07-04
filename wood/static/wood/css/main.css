@@ -89,7 +89,7 @@ body {
 	float: right;
 	font-size: 34px;
 	line-height: 53px;
-    padding: 0px 20px;
+    padding: 0 20px;
 }
 h1 {
 	color: #e7ceff;
@@ -143,13 +143,22 @@ a {
 	text-align: left;
 }
 .single_art img {
+	float: left;
 	max-width:40%;
+	margin-right: 10px;
+	border-radius: 10px;
+}
+.comments{
+	padding: 0 20px 0 20px;
+	margin-bottom: 10px;
+	border: solid 1px rgb(98, 10, 112);
+	border-radius: 10px;
 }
 .comments p {
 	color: #6c61e7;
 }
 .right_side {
-	padding: 0px 0px 0px 0px;
+	padding: 0 0 0 0;
     border-radius: 20px;
     background-color: #e7ceff;
 	margin-top: 30px;
@@ -162,7 +171,7 @@ a {
 }
 .store_category {
     font-size: 16px;
-    padding-top: 50px;
+	text-align: center;
 }
 .store_page_items {
     max-width: 200px;
@@ -177,3 +186,8 @@ a {
     width: 160px;
 }
 /* ----------- */
+#footer{
+	background-color: #330066;
+	width: 100%;
+	height: 50px;
+}

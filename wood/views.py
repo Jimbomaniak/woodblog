@@ -1,5 +1,5 @@
 from django.shortcuts import render, render_to_response, redirect
-from .models import Article, Product, Comments
+from .models import Article, Product, Comments, Category
 from .forms import CommentForm
 from django.core.context_processors import csrf
 
@@ -22,8 +22,9 @@ def single_article(request, article_id=1):
 
 def store(request):
     get_products = Product.objects.all()
-    products = {'products': get_products}
-    return render(request, 'wood/store.html', products)
+    get_categories = Category.objects.all()
+    content = {'products': get_products, 'categories': get_categories}
+    return render(request, 'wood/store.html', content)
 
 
 def about(request):
