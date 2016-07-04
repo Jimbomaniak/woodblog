@@ -123,8 +123,9 @@
     </table>
     <table name="wood_comments" schema="" catalog="" type="TABLE">
       <column name="id" sqlType="INTEGER" precision="0" scale="-1" nullable="false" jdbcType="4"/>
-      <column name="comments_text" sqlType="TEXT" precision="0" scale="-1" nullable="false" jdbcType="12"/>
       <column name="comments_article_id" sqlType="INTEGER" precision="0" scale="-1" nullable="false" jdbcType="4"/>
+      <column name="pub_date" sqlType="DATETIME" precision="0" scale="-1" nullable="false" jdbcType="12"/>
+      <column name="comments_text" sqlType="TEXT" precision="0" scale="-1" nullable="false" jdbcType="12"/>
       <primary-key columns="id"/>
       <foreign-key name="#FAKE_wood_comments_1" columns="comments_article_id" ref-table="wood_article" ref-schema="" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="3" deferrability="1"/>
       <index name="wood_comments_b6c9a672" unique="true" columns="comments_article_id"/>
