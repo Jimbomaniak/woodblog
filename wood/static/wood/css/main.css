@@ -148,14 +148,20 @@ a {
 	margin-right: 10px;
 	border-radius: 10px;
 }
-.comments{
+.comments {
 	padding: 0 20px 0 20px;
 	margin-bottom: 10px;
 	border: solid 1px rgb(98, 10, 112);
 	border-radius: 10px;
 }
 .comments p {
-	color: #6c61e7;
+	color: rgba(98, 148, 231, 0.72);
+}
+#clr {
+	color: #0d0084;
+}
+#id_comments_text {
+	width: 70%;
 }
 .right_side {
 	padding: 0 0 0 0;
