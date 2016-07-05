@@ -47,3 +47,7 @@ Temporary Items
 .apdisk
 *.pyc
 .idea/*
+.idea/
+wood/__pycache__/
+wood/migrations/__pycache__/
+woodblog/__pycache__/
