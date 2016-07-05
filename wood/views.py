@@ -20,11 +20,7 @@ def single_article(request, article_id=1):
     return render_to_response('wood/article.html', args)
 
 
-def about(request):
-    return render(request, 'wood/about.html')
-
-
-def addcomment(request, article_id):
+def add_comment(request, article_id):
     if request.POST:
         form = CommentForm(request.POST)
         if form.is_valid():
@@ -41,5 +37,11 @@ def store(request):
     return render(request, 'wood/store.html', content)
 
 
-def store_item(request, item_id):
-    pass
+def store_item(request, product_id):
+    get_item = Product.objects.get(id=product_id)
+    content = {'item': get_item}
+    return render(request, 'wood/store_item.html', content)
+
+
+def about(request):
+    return render(request, 'wood/about.html')

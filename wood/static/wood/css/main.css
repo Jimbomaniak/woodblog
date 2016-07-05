@@ -232,10 +232,36 @@ a {
 .store_page_items_name{
     font-family: "Bitstream Vera Sans Mono", Monaco, "Courier New", Courier, monospace;
     font-size: 18px;
+	margin-top: -5px;
+	margin-bottom: -20px;
 }
 .store_images{
     height: 160px;
     width: 160px;
+}
+.store_item{
+	margin: 20px 0 40px 0;
+}
+.store_item img{
+	float: left;
+	border-radius: 20px;
+	height: 300px;
+	width: 300px;
+	margin: 0 50px 40px 0;
+}
+.store_item h1{
+	text-align: left;
+}
+.store_item p{
+	text-align: justify;
+}
+.store_item button{
+	border-radius: 10px;
+	color: white;
+	background-color: #9966CC;
+}
+.store_item button:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24);
 }
 /* ----------- */
 .footer {

@@ -1,0 +1,15 @@
+{% extends 'wood/base.html' %}
+
+{% block title %}Item_title{% endblock %}
+
+{% block content %}
+    <div class="col-md-8 col-md-offset-2">
+        <div class="store_item">
+            <h1>{{ item.name }}</h1>
+            <img src="{{ item.image.url }}" alt="{{ item.name }}">
+            <p>{{ item.description }}</p>
+            <p>Цена: {{ item.price }} грн</p>
+            <button class="btn btn-default">Купить</button>
+        </div>
+    </div>
+{% endblock %}
