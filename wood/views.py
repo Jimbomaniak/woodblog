@@ -20,13 +20,6 @@ def single_article(request, article_id=1):
     return render_to_response('wood/article.html', args)
 
 
-def store(request):
-    get_products = Product.objects.all()
-    get_categories = Category.objects.all()
-    content = {'products': get_products, 'categories': get_categories}
-    return render(request, 'wood/store.html', content)
-
-
 def about(request):
     return render(request, 'wood/about.html')
 
@@ -39,3 +32,14 @@ def addcomment(request, article_id):
             comment.comments_article = Article.objects.get(id=article_id)
             form.save()
     return redirect('/articles/get/%s' % article_id)
+
+
+def store(request):
+    get_products = Product.objects.all()
+    get_categories = Category.objects.all()
+    content = {'products': get_products, 'categories': get_categories}
+    return render(request, 'wood/store.html', content)
+
+
+def store_item(request, item_id):
+    pass

@@ -132,3 +132,11 @@ MEDIA_URL = '/media/'
 
 
 # Admin site: oleg qwerty12345
+
+"""
+The "Recent Actions" panel in Django Admin displays LogEntry models.
+To clear it you would just delete all the objects:
+
+from django.contrib.admin.models import LogEntry
+LogEntry.objects.all().delete()
+"""
