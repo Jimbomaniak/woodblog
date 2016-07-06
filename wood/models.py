@@ -29,6 +29,8 @@ class Product(models.Model):
     def __str__(self):
         return self.name
 
+    # Нужно ли поле "amount" для каждого товара?
+
 
 class Category(models.Model):
     class Meta:
@@ -53,3 +55,4 @@ class Comments(models.Model):
     comments_text = models.TextField(verbose_name='Текст комментария')
     pub_date = models.DateTimeField(default=timezone.now)
     comments_article = models.ForeignKey(Article)
+

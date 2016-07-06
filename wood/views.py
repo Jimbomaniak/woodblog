@@ -10,7 +10,7 @@ def main(request):
     return render(request, 'wood/main.html', context)
 
 
-def single_article(request, article_id=1):
+def single_article(request, article_id):
     comment_form = CommentForm
     args = {}
     args.update(csrf(request))
@@ -38,9 +38,16 @@ def store(request):
 
 
 def store_item(request, product_id):
-    get_item = Product.objects.get(id=product_id)
-    content = {'item': get_item}
+    get_product = Product.objects.get(id=product_id)
+    content = {'product': get_product}
     return render(request, 'wood/store_item.html', content)
+
+
+def store_category(request, category_id):
+    category = Category.objects.get(id=category_id)
+    get_by_category = Product.objects.filter(category=category_id)
+    content = {'products': get_by_category, 'category': category}
+    return render(request, 'wood/store_category.html', content)
 
 
 def about(request):

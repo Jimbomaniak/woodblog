@@ -1,15 +1,15 @@
 {% extends 'wood/base.html' %}
 
-{% block title %}Item_title{% endblock %}
+{% block title %}{{ product.name }}{% endblock %}
 
 {% block content %}
     <div class="col-md-8 col-md-offset-2">
         <div class="store_item">
-            <h1>{{ item.name }}</h1>
-            <img src="{{ item.image.url }}" alt="{{ item.name }}">
-            <p>{{ item.description }}</p>
-            <p>Цена: {{ item.price }} грн</p>
-            <button class="btn btn-default">Купить</button>
+            <img src="{{ product.image.url }}" alt="{{ product.name }}">
+            <h2>{{ product.name }}</h2>
+            <p>Цена: {{ product.price }} грн</p>
+            <p>{{ product.description }}</p>
+            <button class="button">Купить</button>
         </div>
     </div>
 {% endblock %}
