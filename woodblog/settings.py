@@ -140,3 +140,5 @@ To clear it you would just delete all the objects:
 from django.contrib.admin.models import LogEntry
 LogEntry.objects.all().delete()
 """
+
+# Work csrf: V3agVcqBsoruMLIQIoyPmoQhL7xKQBot 06.07
