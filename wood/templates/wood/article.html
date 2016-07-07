@@ -18,7 +18,7 @@
                     {% for comment in comments %}
                         <div class="comments">
                             <p>{{ comment.pub_date }}<br/></p>
-                            <p id="clr">{{ comment.comments_text }}</p>
+                            <p class="clr">{{ comment.comments_text }}</p>
                         </div>
                     {% endfor %}
                     <form action="/articles/addcomment/{{ article.id }}/" method="post">

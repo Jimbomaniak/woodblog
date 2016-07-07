@@ -1,5 +1,6 @@
 from django.db import models
 from django.utils import timezone
+from phonenumber_field.modelfields import PhoneNumberField
 
 TEXT_LEN_MIN = 400
 
@@ -44,15 +45,22 @@ class Category(models.Model):
         return self.name
 
 
-class Comments(models.Model):
+class Comment(models.Model):
     def __str__(self):
         return self.comments_text[:30]
-
-    class Meta:
-        verbose_name = 'Comment'
-        verbose_name_plural = 'Comments'
 
     comments_text = models.TextField(verbose_name='Текст комментария')
     pub_date = models.DateTimeField(default=timezone.now)
     comments_article = models.ForeignKey(Article)
 
+
+class Purchase(models.Model):
+    product = models.ForeignKey(Product)
+    full_name = models.CharField(max_length=100)
+    address = models.CharField(max_length=300)
+    phone_num = PhoneNumberField()
+    comment = models.TextField(verbose_name="Дополнительная информация", blank=True)
+    buy_date = models.DateTimeField(default=timezone.now)
+
+    def __str__(self):
+        return self.full_name + " " + self.product.name

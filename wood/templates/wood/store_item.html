@@ -15,16 +15,21 @@
         </div>
     </div>
     <div class="modal" id="buy" role="dialog">
-        <div class="modal-dialog">
+        <div class="modal-dialog modal-sm">
             <div class="modal-content">
-                <div class="modal-header">
-                    <h4>Купить {{ product.name }}</h4>
+                <div class="modal-header text-center">
+                    <h2>Купить {{ product.name }}</h2>
                 </div>
                 <div class="modal-body">
-                    <p>Здесь будет форма для заказа</p>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="button" data-dismiss="modal">Отмена</button>
+                    <form class="text-center" method="POST" action="/store/purchase/{{ product.id }}/">
+                        {% csrf_token %}
+                        {% for field in form %}
+                            {{ field.label_tag }}<br/>
+                            {{ field }}<br/>
+                        {% endfor %}
+                        <input type="submit" class="button">
+                        <button type="button" class="button cancel" data-dismiss="modal">Отмена</button>
+                    </form>
                 </div>
             </div>
         </div>
