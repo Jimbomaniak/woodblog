@@ -15,9 +15,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<link rel="stylesheet" href={% static "wood/libs/bootstrap/bootstrap-grid-3.3.1.min.css" %}  />
 	<link rel="stylesheet" href={% static "wood/libs/font-awesome-4.2.0/css/font-awesome.min.css" %} />
-	<link rel="stylesheet" href={% static "wood/libs/fancybox/jquery.fancybox.css" %} />
 	<link rel="stylesheet" href={% static "wood/libs/owl-carousel/owl.carousel.css" %} />
-	<link rel="stylesheet" href={% static "wood/libs/countdown/jquery.countdown.css" %} />
+    <link rel="stylesheet" href={% static "wood/css/bootstrap.min.css" %} />
 	<link rel="stylesheet" href={% static "wood/css/fonts.css" %} />
 	<link rel="stylesheet" href={% static "wood/css/main.css" %} />
 	<link rel="stylesheet" href={% static "wood/css/media.css" %} />
@@ -25,21 +24,21 @@
 <body>
     <header class="top_header">
         <div class="header_topline">
-                <div class="container">
-                    <div class="col-md-12">
-                        <div class="row">
-                            <div class="top_links">
-                                <a href="#">ЧТо то</a>
-                            </div>
-                            <div class="soc_buttons">
-                                <a href="#"><i class="fa fa-vk" aria-hidden="true"></i></a>
-                                <a href="https://www.facebook.com/groups/1535250940132470/">
-                                    <i class="fa fa-facebook" aria-hidden="true"></i>
-                                </a>
-                            </div>
+            <div class="container">
+                <div class="col-md-12">
+                    <div class="row">
+                        <div class="top_links">
+                            <a href="#">ЧТо то</a>
+                        </div>
+                        <div class="soc_buttons">
+                            <a href="#"><i class="fa fa-vk" aria-hidden="true"></i></a>
+                            <a href="https://www.facebook.com/groups/1535250940132470/">
+                                <i class="fa fa-facebook" aria-hidden="true"></i>
+                            </a>
                         </div>
                     </div>
-             </div>
+                </div>
+            </div>
         </div>
         <div class="container">
             <div class="col-md-12">
@@ -51,53 +50,50 @@
                             <li><a href="{% url 'store' %}">Товары</a></li>
                             <li><a href="{% url 'about' %}">Контакты</a></li>
                         </ul>
-                        <div class="top_contacts"><i class="fa fa-mobile" aria-hidden="true"></i>(066)-671-31-51</div>
+                        <div class="top_contacts">
+                            <i class="fa fa-mobile" aria-hidden="true"></i>(066)-671-31-51
+                        </div>
                     </nav>
                     <h1>Уникальные изделия ручной работы</h1>
-                        <div class="slider_container">
-                            <div class="next_button"><i class="fa fa-angle-right" aria-hidden="true"></i></div>
-                            <div class="prev_button"><i class="fa fa-angle-left" aria-hidden="true"></i></div>
-                            <div class="carousel">
-                                <div class="slide_item"><img src="{% static "wood/images/1.jpg" %} " alt=""></div>
-                                <div class="slide_item"><img src="{% static "wood/images/2.jpg" %} " alt=""></div>
-                                <div class="slide_item"><img src="{% static "wood/images/3.jpg" %} " alt=""></div>
-                                <div class="slide_item"><img src="{% static "wood/images/4.jpg" %} " alt=""></div>
-                                <div class="slide_item"><img src="{% static "wood/images/5.jpg" %} " alt=""></div>
-                                <div class="slide_item"><img src="{% static "wood/images/6.jpg" %} " alt=""></div>
-                                <div class="slide_item"><img src="{% static "wood/images/7.jpg" %} " alt=""></div>
-                                <div class="slide_item"><img src="{% static "wood/images/8.jpg" %} " alt=""></div>
-                                <div class="slide_item"><img src="{% static "wood/images/9.jpg" %} " alt=""></div>
-                                <div class="slide_item"><img src="{% static "wood/images/10.jpg" %} " alt=""></div>
-                            </div>
+                    <div class="slider_container">
+                        <div class="next_button"><i class="fa fa-angle-right" aria-hidden="true"></i></div>
+                        <div class="prev_button"><i class="fa fa-angle-left" aria-hidden="true"></i></div>
+                        <div class="carousel">
+                            <div class="slide_item"><img src="{% static "wood/images/1.jpg" %} " alt=""></div>
+                            <div class="slide_item"><img src="{% static "wood/images/2.jpg" %} " alt=""></div>
+                            <div class="slide_item"><img src="{% static "wood/images/3.jpg" %} " alt=""></div>
+                            <div class="slide_item"><img src="{% static "wood/images/4.jpg" %} " alt=""></div>
+                            <div class="slide_item"><img src="{% static "wood/images/5.jpg" %} " alt=""></div>
+                            <div class="slide_item"><img src="{% static "wood/images/6.jpg" %} " alt=""></div>
+                            <div class="slide_item"><img src="{% static "wood/images/7.jpg" %} " alt=""></div>
+                            <div class="slide_item"><img src="{% static "wood/images/8.jpg" %} " alt=""></div>
+                            <div class="slide_item"><img src="{% static "wood/images/9.jpg" %} " alt=""></div>
+                            <div class="slide_item"><img src="{% static "wood/images/10.jpg" %} " alt=""></div>
                         </div>
+                    </div>
                 </div>
             </div>
         </div>
     </header>
+    <!--[if lt IE 9]>
+    <script src={% static "wood/libs/html5shiv/es5-shim.min.js" %}></script>
+    <script src={% static "wood/libs/html5shiv/html5shiv.min.js" %}></script>
+    <script src={% static "wood/libs/html5shiv/html5shiv-printshiv.min.js" %}></script>
+    <script src={% static "wood/libs/respond/respond.min.js" %}></script>
+    <![endif]-->
+    <script src={% static "wood/js/jquery-1.12.3.min.js" %}></script>
+    <script src={% static "wood/js/bootstrap.min.js" %}></script>
+    <script src={% static "wood/libs/jquery-mousewheel/jquery.mousewheel.min.js" %}></script>
+    <script src={% static "wood/libs/waypoints/waypoints-1.6.2.min.js" %}></script>
+    <script src={% static "wood/libs/scrollto/jquery.scrollTo.min.js" %}></script>
+    <script src={% static "wood/libs/owl-carousel/owl.carousel.min.js" %}></script>
+    <script src={% static "wood/libs/landing-nav/navigation.js" %}></script>
+    <script src={% static "wood/js/common.js" %}></script>
     <section class="main_content">
         {% block content %}{% endblock %}
     </section>
     <footer class="footer">
         <p>Kupriyanov and Chulanovskiy production</p>
     </footer>
-	<!--[if lt IE 9]>
-	<script src={% static "wood/libs/html5shiv/es5-shim.min.js" %}></script>
-	<script src={% static "wood/libs/html5shiv/html5shiv.min.js" %}></script>
-	<script src={% static "wood/libs/html5shiv/html5shiv-printshiv.min.js" %}></script>
-	<script src={% static "wood/libs/respond/respond.min.js" %}></script>
-	<![endif]-->
-	<script src={% static "wood/libs/jquery/jquery-1.11.1.min.js" %}></script>
-	<script src={% static "wood/libs/jquery-mousewheel/jquery.mousewheel.min.js" %}></script>
-	<script src={% static "wood/libs/fancybox/jquery.fancybox.pack.js" %}></script>
-	<script src={% static "wood/libs/waypoints/waypoints-1.6.2.min.js" %}></script>
-	<script src={% static "wood/libs/scrollto/jquery.scrollTo.min.js" %}></script>
-	<script src={% static "wood/libs/owl-carousel/owl.carousel.min.js" %}></script>
-	<script src={%  static "wood/libs/countdown/jquery.plugin.js" %}></script>
-	<script src={%  static "wood/libs/countdown/jquery.countdown.min.js" %}></script>
-	<script src={% static "wood/libs/countdown/jquery.countdown-ru.js" %}></script>
-	<script src={% static "wood/libs/landing-nav/navigation.js" %}></script>
-	<script src={% static "wood/js/common.js" %}></script>
-	<!-- Yandex.Metrika counter --><!-- /Yandex.Metrika counter -->
-	<!-- Google Analytics counter --><!-- /Google Analytics counter -->
 </body>
 </html>

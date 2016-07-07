@@ -6,9 +6,9 @@
     <div class="col-md-12">
         <div class="store_category">
             <h2>Категории:</h2>
-            <ul class="nav nav-list">
+            <ul >
                 {% for category in categories %}
-                    <li><a href="{% url 'store_category' category.id %}" class='button no_margin'>
+                    <li><a href="{% url 'store_category' category.id %}" class='button'>
                         {{ category.name }}</a></li>
                 {% endfor %}
             </ul>
