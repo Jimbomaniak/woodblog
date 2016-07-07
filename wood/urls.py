@@ -10,5 +10,6 @@ urlpatterns = [
     url(r'^about/$', views.about, name='about'),
     url(r'^store/$', views.store, name='store'),
     url(r'^store/(?P<product_id>[0-9]+)/$', views.store_item, name='store_item'),
-    url(r'^store/category/(?P<category_id>[0-9]+)/$', views.store_category, name='store_category')
+    url(r'^store/category/(?P<category_id>[0-9]+)/$', views.store_category, name='store_category'),
+    url(r'^store/purchase/(?P<product_id>[0-9]+)/$', views.store_purchase, name='store_purchase'),
     ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

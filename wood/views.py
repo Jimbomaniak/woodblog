@@ -1,6 +1,6 @@
 from django.shortcuts import render, render_to_response, redirect
-from .models import Article, Product, Comments, Category
-from .forms import CommentForm
+from .models import Article, Product, Comment, Category
+from .forms import CommentForm, PurchaseForm
 from django.core.context_processors import csrf
 
 
@@ -15,7 +15,7 @@ def single_article(request, article_id):
     args = {}
     args.update(csrf(request))
     args['article'] = Article.objects.get(id=article_id)
-    args['comments'] = Comments.objects.filter(comments_article_id=article_id)
+    args['comments'] = Comment.objects.filter(comments_article_id=article_id)
     args['form'] = comment_form
     return render_to_response('wood/article.html', args)
 
@@ -39,7 +39,8 @@ def store(request):
 
 def store_item(request, product_id):
     get_product = Product.objects.get(id=product_id)
-    content = {'product': get_product}
+    purchase_form = PurchaseForm
+    content = {'product': get_product, 'form': purchase_form}
     return render(request, 'wood/store_item.html', content)
 
 
@@ -48,6 +49,16 @@ def store_category(request, category_id):
     get_by_category = Product.objects.filter(category=category_id)
     content = {'products': get_by_category, 'category': category}
     return render(request, 'wood/store_category.html', content)
+
+
+def store_purchase(request, product_id):
+    if request.POST:
+        purchase_form = PurchaseForm(request.POST)
+        if purchase_form.is_valid():
+            form = purchase_form.save(commit=False)
+            form.product = Product.objects.get(id=product_id)
+            form.save()
+    return redirect('store_item', product_id=product_id)
 
 
 def about(request):

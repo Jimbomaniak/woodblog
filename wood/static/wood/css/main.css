@@ -180,7 +180,7 @@ a {
 	padding:0 50px;
 	color: rgb(98, 10, 112);
 }
-.single_art p, form {
+.single_art form, p {
 	text-align: left;
 }
 .single_art img {
@@ -198,18 +198,14 @@ a {
 .comments p {
 	color: rgba(98, 148, 231, 0.72);
 }
-#clr {
+.clr {
 	color: #0d0084;
-}
-#id_comments_text {
-	width: 70%;
 }
 .right_side {
 	padding: 0 0 0 0;
     border-radius: 20px;
     background-color: #9966cc;
 	margin-top: 30px;
-
 }
 .right_side ul {
 	list-style-type:none;
