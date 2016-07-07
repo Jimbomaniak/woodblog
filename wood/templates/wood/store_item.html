@@ -9,7 +9,26 @@
             <h2>{{ product.name }}</h2>
             <p>Цена: {{ product.price }} грн</p>
             <p>{{ product.description }}</p>
-            <button class="button">Купить</button>
+            <button class="button" data-toggle="modal" data-target="#buy">
+                Купить
+            </button>
+        </div>
+    </div>
+    <div class="modal" id="buy" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4>Купить {{ product.name }}</h4>
+                </div>
+                <div class="modal-body">
+                    <p>Здесь будет форма для заказа</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="button" data-dismiss="modal">Отмена</button>
+                </div>
+            </div>
         </div>
     </div>
 {% endblock %}
+
+
