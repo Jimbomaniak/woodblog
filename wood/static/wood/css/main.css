@@ -28,6 +28,7 @@ body {
 	font-size: 16px;
 }
 h1 {
+	padding-bottom: 20px;
 	color: #e7ceff;
 	text-align: center;
 	font-family: "BradobreiRegular", sans-serif;
@@ -77,11 +78,12 @@ a:hover {
 .soc_buttons a {
 	font-size:26px;
     margin-left:8px;
+	display: inline-block;
 }
 .soc_buttons a:hover {
     background-color: #9047b4;
     border-radius: 13px;
-    transition: all 0.2s
+    transition: all 0.5s
 
 }
 .logo {
@@ -239,20 +241,20 @@ a {
 	display: inline;
 }
 .store_page_items {
-    max-width: 200px;
+	max-width: 200px;
     display: inline-block;
-	text-align: center;
-	border: solid 1px rgb(98, 10, 112);
-	border-radius: 10px;
-	margin-top: 25px;
-	margin-bottom: 25px;
+    text-align: center;
+    border: solid 1px rgb(98, 10, 112);
+    border-radius: 10px;
+    margin-bottom: 25px;
+    margin-left: 25px;
 }
 .store_page_items_name{
     font-size: 18px;
 	margin-bottom: 0;
 }
 .store_images{
-    height: 160px;
+    height: 140px;
     width: 160px;
 }
 .store_item{
