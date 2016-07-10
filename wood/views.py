@@ -2,11 +2,13 @@ from django.shortcuts import render, render_to_response, redirect
 from .models import Article, Product, Comment, Category
 from .forms import CommentForm, PurchaseForm
 from django.template.context_processors import csrf
+from django.core.paginator import Paginator
 
 
-def main(request):
+def main(request, page_number=1):
     articles = Article.objects.all()
-    context = {'articles': articles}
+    current_page = Paginator(articles, 3)
+    context = {'articles': current_page.page(page_number)}
     return render(request, 'wood/main.html', context)
 
 
