@@ -169,6 +169,9 @@ a:hover {
 	left: 25px;
 }
 /*------*/
+.blog_item{
+	margin-bottom:10px;
+}
 .blog_item img {
 	max-width:100%;
 	border-radius: 10px;
