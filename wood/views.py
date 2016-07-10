@@ -1,7 +1,7 @@
 from django.shortcuts import render, render_to_response, redirect
 from .models import Article, Product, Comment, Category
 from .forms import CommentForm, PurchaseForm
-from django.core.context_processors import csrf
+from django.template.context_processors import csrf
 
 
 def main(request):
