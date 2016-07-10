@@ -17,8 +17,10 @@
             {% for product in products %}
             <div class="store_page_items">
                 <img src="{{ product.image.url }}" alt='{{ product.name }}' class="store_images img-rounded"/>
-                <p class="store_page_items_name"><a href="{% url 'store_item' product.id %}">{{ product }}</a></p>
-                <p>{{ product.price }} &#8372</p>
+                <div class="store_page_items_name">
+                    <p><a href="{% url 'store_item' product.id %}">{{ product }}</a></p>
+                    <p>{{ product.price }} &#8372</p>
+                </div>
             </div>
             {% endfor %}
         </div>
