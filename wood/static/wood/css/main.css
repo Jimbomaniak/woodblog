@@ -158,6 +158,10 @@ a:hover {
 	top: 40%;
 	border-radius: 10em;
 }
+.next_button:hover, .prev_button:hover {
+	background-color: rgba(157, 72, 216, 0.54);
+	transition: all 0.5s;
+}
 .next_button {
 	right: 25px;
 }
