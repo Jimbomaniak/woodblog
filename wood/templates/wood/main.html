@@ -6,27 +6,28 @@
 <div class="container">
     <div class="col-md-8">
         <div class="content_text">
+            {% for article in articles %}
             <div class="blog_item">
                 <div class="row">
                     <div class="col-md-14">
-                        {% for article in articles %}
-                            <h3><a href="{% url 'single_article' article.id %}">{{ article.title }}</a></h3>
-                            </div>
-                            <div class="col-md-4">
-                                <img src="{{ article.image.url }}" alt="">
-                            </div>
-                            <div class="col-md-8">
-                                <p>{{ article.short_text }}...
-                                    <button class="button">
-                                        <a href="{% url 'single_article' article.id %}">Читать дальше</a>
-                                    </button>
-                                </p>
-                            </div>
-                        {% endfor %}
+                        <h3><a href="{% url 'single_article' article.id %}">{{ article.title }}</a></h3>
+                    </div>
+                    <div class="col-md-4">
+                        <img src="{{ article.image.url }}" alt="">
+                    </div>
+                    <div class="col-md-8">
+                        <p>{{ article.short_text }}...
+                            <button class="button">
+                                <a href="{% url 'single_article' article.id %}">Читать дальше</a>
+                            </button>
+                        </p>
+                    </div>
                 </div>
             </div>
+            {% endfor %}
+    </div>
         </div>
-            <div class="col-md-4">
+    <div class="col-md-4">
                 <aside class="right_side">
                     <ul>
                         <li>Список статей:</li>
@@ -36,7 +37,7 @@
                     </ul>
                 </aside>
             </div>
-    </div>
+
 </div>
 
 {% endblock %}
