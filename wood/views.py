@@ -8,7 +8,7 @@ from django.core.paginator import Paginator
 def main(request, page_number=1):
     articles = Article.objects.all()
     current_page = Paginator(articles, 3)
-    context = {'articles': current_page.page(page_number)}
+    context = {'articles': current_page.page(page_number), 'pages': current_page.page_range}
     return render(request, 'wood/main.html', context)
 
 
