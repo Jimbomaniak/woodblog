@@ -2,7 +2,7 @@ from django.db import models
 from django.utils import timezone
 from phonenumber_field.modelfields import PhoneNumberField
 
-TEXT_LEN_MIN = 400
+TEXT_LEN_MIN = 200
 
 
 class Article(models.Model):
@@ -14,10 +14,8 @@ class Article(models.Model):
         return self.title
 
     def short_text(self):
-        if len(self.text) > TEXT_LEN_MIN:
-            return self.text[:TEXT_LEN_MIN]
-        else:
-            return self.text
+        short = self.text[:TEXT_LEN_MIN].split(' ')[:-1]
+        return ' '.join(short) + ' >>>'
 
 
 class Product(models.Model):
