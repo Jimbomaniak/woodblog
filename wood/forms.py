@@ -1,4 +1,4 @@
-from django.forms import ModelForm, Textarea, TextInput
+from django.forms import ModelForm, Textarea, NumberInput
 from .models import Comment, Purchase
 
 
@@ -27,19 +27,20 @@ class PurchaseForm(ModelForm):
                 'cols': '30%',
                 'rows': 1,
                 'style': 'resize: none',
-                'placeholder': 'ФИО'
+                'placeholder': ''
             }),
             'address': Textarea(attrs={
                 'cols': '30%',
                 'rows': 2,
                 'style': 'resize: none',
-                'placeholder': 'город, № отделения  или адрес'
+                'placeholder': 'город, адрес'
             }),
             'phone_num': Textarea(attrs={
                 'cols': '30%',
                 'rows': 1,
+                'type': 'number',
                 'style': 'resize: none',
-                'placeholder': 'телефон'
+                'placeholder': ''
             }),
             'comment': Textarea(attrs={
                 'cols': '30%',

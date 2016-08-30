@@ -5,6 +5,18 @@ from django.template.context_processors import csrf
 from django.core.paginator import Paginator
 
 
+def forty_main(request):
+    articles = Article.objects.all()
+    context = {'articles': articles}
+    return render(request, 'forty/index.html', context)
+
+
+def forty_article(request, article_id):
+    article = Article.objects.get(id=article_id)
+    context = {'article': article}
+    return render(request, 'forty/generic.html', context)
+
+
 def main(request, page_number=1):
     articles = Article.objects.all()
     current_page = Paginator(articles, 3)

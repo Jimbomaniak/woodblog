@@ -5,6 +5,8 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     url(r'^$', views.main, name='main'),
+    url(r'^forty/$', views.forty_main, name='forty_main'),
+    url(r'^forty/article/(?P<article_id>[0-9]+)/$', views.forty_article, name ='forty_article'),
     url(r'^articles/get/(?P<article_id>[0-9]+)/$', views.single_article, name='single_article'),
     url(r'^articles/addcomment/(?P<article_id>\d+)/$', views.add_comment),
     url(r'^about/$', views.about, name='about'),
