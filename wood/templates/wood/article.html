@@ -9,7 +9,7 @@
                 <div class="col-md-8 col-md-offset-2">
                     <h2>{{ article.title }}</h2>
                     <img src="{{ article.image.url }}">
-                    <p style="text-align: justify">{{ article.text }}</p>
+                    <p class="art_text">{{ article.text|linebreaksbr }}</p>
                 </div>
             </div>
             <div class="row">
@@ -18,14 +18,16 @@
                     {% for comment in comments %}
                         <div class="comments">
                             <p>{{ comment.pub_date }}<br/></p>
-                            <p class="clr">{{ comment.comments_text }}</p>
+                            <p class="clr">{{ comment.comments_text|linebreaksbr }}</p>
                         </div>
                     {% endfor %}
-                    <form action="/articles/addcomment/{{ article.id }}/" method="post">
-                        {% csrf_token %}
-                        {{ form.as_p }}
-                        <input type="submit" class="button" value="Добавить комментарий">
-                    </form>
+                    <div class="text-center">
+                        <form action="/articles/addcomment/{{ article.id }}/" method="post">
+                            {% csrf_token %}
+                            {{ form.as_p }}
+                            <input type="submit" class="button" value="Добавить комментарий">
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>

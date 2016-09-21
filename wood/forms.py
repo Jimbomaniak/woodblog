@@ -1,4 +1,4 @@
-from django.forms import ModelForm, Textarea, NumberInput
+from django.forms import ModelForm, Textarea, EmailInput, NumberInput
 from .models import Comment, Purchase
 
 
@@ -8,9 +8,9 @@ class CommentForm(ModelForm):
         exclude = ['comments_article', 'pub_date']
         widgets = {
             'comments_text': Textarea(attrs={
-                'cols': '100%',
                 'rows': 3,
-                'placeholder': 'введите текст'
+                'placeholder': 'введите текст',
+                'style': 'resize: none; width: 100%',
             })
         }
         labels = {
@@ -24,33 +24,33 @@ class PurchaseForm(ModelForm):
         exclude = ['product', 'buy_date']
         widgets = {
             'full_name': Textarea(attrs={
-                'cols': '30%',
                 'rows': 1,
-                'style': 'resize: none',
-                'placeholder': ''
+                'style': 'resize: none; width: 100%',
+                'placeholder': 'Имя'
+            }),
+            'phone_num': NumberInput(attrs={
+                'placeholder': 'Телефон',
+                'style': 'width: 100%',
+            }),
+            'email': EmailInput(attrs={
+                'placeholder': 'Email',
+                'style': 'width: 100%',
             }),
             'address': Textarea(attrs={
-                'cols': '30%',
                 'rows': 2,
-                'style': 'resize: none',
-                'placeholder': 'город, адрес'
-            }),
-            'phone_num': Textarea(attrs={
-                'cols': '30%',
-                'rows': 1,
-                'type': 'number',
-                'style': 'resize: none',
-                'placeholder': ''
+                'style': 'resize: none; width: 100%',
+                'placeholder': 'Куда доставить'
             }),
             'comment': Textarea(attrs={
-                'cols': '30%',
-                'rows': 3,
-                'style': 'resize: none',
-                'placeholder': 'комментарий'
+                'rows': 2,
+                'style': 'resize: none; width: 100%',
+                'placeholder': 'Комментарий',
             })
         }
         labels = {
-            'full_name': 'Полное имя:',
-            'address': 'Адрес доставки:',
-            'phone_num': 'Контактный телефон:',
+            'full_name': '',
+            'address': '',
+            'phone_num': '',
+            'email': '',
+            'comment': '',
         }
