@@ -70,7 +70,9 @@ a:hover {
 	display: inline-block;
 	vertical-align: middle;
 }
-
+.top_info{
+	display: inline-block;
+}
 .soc_buttons {
 	float: right;
     vertical-align: middle;
@@ -84,13 +86,12 @@ a:hover {
     background-color: #9047b4;
     border-radius: 13px;
     transition: all 0.5s
-
 }
 .logo {
-	display: block;
-	padding:15px 0;
+	display: inline-block;
+	padding: 0;
 	color: #fff;
-	font-size: 40px;
+	font-size: 2em;
 	font-family: 'Lobster', cursive;
 	text-align: center;
 }
@@ -235,7 +236,7 @@ a {
 /*---*/
 /*-------------Store section--------------*/
 .store{
-	margin-top: 20px;
+	width: 100%;
 	text-align: center;
 }
 .store_category {
@@ -252,27 +253,36 @@ a {
 }
 .store_category_name {
 	text-align: center;
-	margin-top: 5px;
+	margin: 5px 0;
 }
 .store_page_items {
-	max-width: 200px;
-    display: inline-block;
+	width: 200px;
+	display: inline-block;
     border: solid 2px rgba(98, 10, 112, 0.3);
     border-radius: 10px;
     margin-bottom: 25px;
-    margin-left: 25px;
+ 
 }
-.store_page_items_name {
+.store_page_items_info {
+	position: relative;
 	font-size: 18px;
     margin-bottom: 0;
     text-align: center;
+
 }
-.store_page_items_name a:hover {
+.store_page_items_info a:hover {
 	color: #e25ecd;
 }
+.store_page_items_name {
+	height: 2em;
+	margin-bottom: 0;
+	line-height: 100%;
+}
+.store_items_price{
+}
 .store_images {
-    height: 140px;
-    width: 160px;
+    height: 160px;
+    width: 100%;
 }
 .store_item {
 	margin: 20px 0 40px 0;
@@ -311,9 +321,20 @@ input::-webkit-inner-spin-button {
 	text-align: center;
 }
 /* Pagination */
+.pagination {
+	width: 100%;
+}
 .pagination ul {
 	list-style-type: none;
 }
 .pagination ul li {
+	font-size: 2em;
 	display: inline-block;
+	margin: 0 5px;
+}
+.pagination ul li a:hover {
+	background-color: #9047b4;
+	color: #FFFFFF;
+	border-radius: 13px;
+	transition: all 0.5s;
 }

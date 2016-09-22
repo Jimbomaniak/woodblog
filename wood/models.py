@@ -27,7 +27,9 @@ class Product(models.Model):
     def __str__(self):
         return self.name
 
-    # Нужно ли поле "amount" для каждого товара?
+    def short_name(self):
+        short = ' '.join(self.name[:40].split(' '))
+        return short
 
 
 class Category(models.Model):

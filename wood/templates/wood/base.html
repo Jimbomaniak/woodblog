@@ -28,13 +28,15 @@
                 <div class="col-md-12">
                     <div class="row">
                         <div class="top_links">
-                            <a href="#">ЧТо то</a>
+                            <div class="logo">
+                                <a href="{% url 'main' %}"><strong>Арт</strong><span> Лавка</span></a>
+                            </div>
                         </div>
                         <div class="soc_buttons">
-                            <a target="_blank" href="https://vk.com/art_lavka_energodar"><i class="fa fa-vk" aria-hidden="true"></i></a>
-                            <a target="_blank" href="https://www.facebook.com/groups/1535250940132470/">
-                                <i class="fa fa-facebook" aria-hidden="true"></i>
-                            </a>
+                        <a target="_blank" href="https://vk.com/art_lavka_energodar">
+                            <i class="fa fa-vk" aria-hidden="true"></i></a>
+                        <a target="_blank" href="https://www.facebook.com/groups/1535250940132470/">
+                            <i class="fa fa-facebook" aria-hidden="true"></i></a>
                         </div>
                     </div>
                 </div>
@@ -43,7 +45,6 @@
         <div class="container">
             <div class="col-md-12">
                 <div class="row">
-                    <a href="{% url 'main' %}" class="logo">Арт-Лавка</a>
                     <nav class="main_menu clearfix">
                         <ul>
                             <li><a href="{% url 'main' %}">Блог</a></li>
@@ -54,7 +55,6 @@
                             <i class="fa fa-mobile" aria-hidden="true"></i>(066)-671-31-51
                         </div>
                     </nav>
-                    <h1>Уникальные изделия ручной работы</h1>
                     <div class="slider_container">
                         <div class="next_button"><i class="fa fa-angle-right" aria-hidden="true"></i></div>
                         <div class="prev_button"><i class="fa fa-angle-left" aria-hidden="true"></i></div>
