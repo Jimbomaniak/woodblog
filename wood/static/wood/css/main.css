@@ -170,6 +170,12 @@ a:hover {
 	left: 25px;
 }
 /*------*/
+/*Main content*/
+.main_content {
+	min-height: 100% !important;
+	height: auto;
+}
+/*------*/
 .blog_item{
 	margin-bottom:10px;
 }
@@ -210,6 +216,9 @@ a {
 }
 .comments p {
 	color: rgba(98, 148, 231, 0.9);
+}
+.input_button {
+	width: 100%;
 }
 .clr {
 	color: #0d0084;

@@ -5,29 +5,31 @@
 {% block content %}
     <div class="col-md-12">
         <div class="single_art">
+            <div class="col-md-8 col-md-offset-2">
             <div class="row">
-                <div class="col-md-8 col-md-offset-2">
-                    <h2>{{ article.title }}</h2>
-                    <img src="{{ article.image.url }}">
-                    <p class="art_text">{{ article.text|linebreaksbr }}</p>
-                </div>
+                <h2>{{ article.title }}</h2>
+                <img src="{{ article.image.url }}">
+                <p class="art_text">{{ article.text|linebreaksbr }}</p>
             </div>
+            </div>
+            <div class="col-md-8 col-md-offset-2">
             <div class="row">
-                <div class="col-md-8 col-md-offset-2">
-                    <h2>Комментарии:</h2>
-                    {% for comment in comments %}
-                        <div class="comments">
-                            <p>{{ comment.pub_date }}<br/></p>
-                            <p class="clr">{{ comment.comments_text|linebreaksbr }}</p>
-                        </div>
-                    {% endfor %}
-                    <div class="text-center">
-                        <form action="/articles/addcomment/{{ article.id }}/" method="post">
-                            {% csrf_token %}
-                            {{ form.as_p }}
-                            <input type="submit" class="button" value="Добавить комментарий">
-                        </form>
+                <h2>Комментарии:</h2>
+                {% for comment in comments %}
+                    <div class="comments">
+                        <p>{{ comment.pub_date }}<br/></p>
+                        <p class="clr">{{ comment.comments_text|linebreaksbr }}</p>
                     </div>
+                {% endfor %}
+                <div class="text-center">
+                    <form action="/articles/addcomment/{{ article.id }}/" method="post">
+                        {% csrf_token %}
+                        {{ form.as_p }}
+                        <div class="input_button text-center">
+                            <input type="submit" class="button" value="Добавить комментарий">
+                        </div>
+                    </form>
+                </div>
                 </div>
             </div>
         </div>
